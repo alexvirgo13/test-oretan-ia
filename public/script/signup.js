@@ -9,6 +9,14 @@ document.getElementById('signup-form')
     }
 });
 
+document.querySelectorAll('input[type=text]')
+        .forEach((input) => {
+            input.addEventListener('focus', (evt) => {
+                document.getElementById(evt.target.id + '-error')
+                        .innerText = '';
+            });
+        })
+;
 
 function validate() {
     //Comprobar si los datos son validos en el cliente
